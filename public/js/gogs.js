@@ -1471,6 +1471,7 @@ $(document).ready(function() {
     var filenameDict = {};
     $dropzone.dropzone({
       url: $dropzone.data("upload-url"),
+      timeout: 99999999,
       headers: { "X-CSRF-Token": csrf },
       maxFiles: $dropzone.data("max-file"),
       maxFilesize: $dropzone.data("max-size"),
