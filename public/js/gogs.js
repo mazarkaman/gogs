@@ -1465,13 +1465,13 @@ $(document).ready(function() {
     $($(this).data("target")).slideToggle(100);
   });
 
-  // Dropzone
+  // Dropzone 12345
   var $dropzone = $("#dropzone");
   if ($dropzone.length > 0) {
     var filenameDict = {};
     $dropzone.dropzone({
       url: $dropzone.data("upload-url"),
-      timeout: 99999999,
+      timeout: 100000,
       headers: { "X-CSRF-Token": csrf },
       maxFiles: $dropzone.data("max-file"),
       maxFilesize: $dropzone.data("max-size"),
