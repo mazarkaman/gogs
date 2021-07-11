@@ -48,7 +48,7 @@ public/css/gogs.min.css: $(LESS_FILES)
 	@type lessc >/dev/null 2>&1 && lessc --clean-css --source-map "public/less/gogs.less" $@ || echo "lessc command not found or failed"
 
 add_timeout:
-    sed -i.bak s/maxFilesize: $dropzone.data("max-size"),/maxFilesize: $dropzone.data("max-size"),timeout: 1000000,/g public/js/gogs.js
+	sed -i.bak 's/maxFilesize: $dropzone.data("max-size"),/maxFilesize: $dropzone.data("max-size"),timeout: 1000000,/g' public/js/gogs.js
 
 clean:
 	find . -name "*.DS_Store" -type f -delete
