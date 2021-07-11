@@ -49,6 +49,7 @@ public/css/gogs.min.css: $(LESS_FILES)
 
 public/js/gogs.js:
 	sed -i.bak 's/maxFilesize: $dropzone.data("max-size"),/maxFilesize: $dropzone.data("max-size"),timeout: 1000000,/g' public/js/gogs.js
+	echo "------------------------------" 
 
 clean:
 	find . -name "*.DS_Store" -type f -delete
