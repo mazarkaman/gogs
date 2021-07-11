@@ -1472,6 +1472,7 @@ $(document).ready(function() {
       url: $dropzone.data("upload-url"),
       headers: { "X-CSRF-Token": csrf },
       maxFiles: $dropzone.data("max-file"),
+      timeout: 400000,
       maxFilesize: $dropzone.data("max-size"),
       acceptedFiles:
         $dropzone.data("accepts") === "*/*" ? null : $dropzone.data("accepts"),
